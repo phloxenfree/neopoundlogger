@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name      Neopets Pound Logger
-// @version    1.0
+// @version    1.01
 // @author phloxenfree
 // @homepage https://github.com/phloxenfree
 // @description  Never lose a pet's info to a trigger-happy refresh again! Logs any desirable pet's info.
@@ -18,7 +18,7 @@
 
     // USER MAKE EDITS HERE!!!!!!!
     const namePattern = cap5L; // Change cap5L to one of the patterns above (ex: capitalised) if desired, or if you know what you're doing, specify your own RegEx
-    let level = 12 // Search is inclusive of whatever you put here
+    let level = 10; // Search is inclusive of whatever you put here
     let SD = 60; // Sum of Strength & Defence you want to search for (inclusive)
 
     // What colours are you searching for? Solid colours excluded by default.
@@ -65,84 +65,35 @@
     // Attempt to set values, this may fail bc sometimes not all 3 pets are loaded
     try {
         N0 = document.getElementById('pet0_name').innerHTML;
-    } catch {
-    }
-    try {
-        N1 = document.getElementById('pet1_name').innerHTML;
-    } catch {
-    }
-    try {
-        N2 = document.getElementById('pet2_name').innerHTML;
-    } catch {
-    }
-
-    try {
         C0 = document.getElementById('pet0_color').innerHTML;
-    } catch {
-    }
-    try {
-        C1 = document.getElementById('pet1_color').innerHTML;
-    } catch {
-    }
-    try {
-        C2 = document.getElementById('pet2_color').innerHTML;
-    } catch {
-    }
-
-    try {
         L0 = document.getElementById('pet0_level').innerHTML;
-    } catch {
-    }
-    try {
-        L1 = document.getElementById('pet1_level').innerHTML;
-    } catch {
-    }
-    try {
-        L2 = document.getElementById('pet2_level').innerHTML;
-    } catch {
-    }
-
-
-    try {
         S0 = document.getElementById('pet0_species').innerHTML;
-    } catch {
-    }
-    try {
-        S1 = document.getElementById('pet1_species').innerHTML;
-    } catch {
-    }
-    try {
-        S2 = document.getElementById('pet2_species').innerHTML;
-    } catch {
-    }
-
-    try {
         STR0 = document.getElementById('pet0_str').innerHTML;
         STR0 = parseInt(STR0);
-    } catch {
-    }
-    try {
-        STR1 = document.getElementById('pet1_str').innerHTML;
-        STR1 = parseInt(STR1);
-    } catch {
-    }
-    try {
-        STR2 = document.getElementById('pet2_str').innerHTML;
-        STR2 = parseInt(STR2);
-    } catch {
-    }
-
-    try {
         DEF0 = document.getElementById('pet0_def').innerHTML;
         DEF0 = parseInt(DEF0);
     } catch {
     }
+    
     try {
+        N1 = document.getElementById('pet1_name').innerHTML;
+        C1 = document.getElementById('pet1_color').innerHTML;
+        L1 = document.getElementById('pet1_level').innerHTML;
+        S1 = document.getElementById('pet1_species').innerHTML;
+        STR1 = document.getElementById('pet1_str').innerHTML;
+        STR1 = parseInt(STR1);
         DEF1 = document.getElementById('pet1_def').innerHTML;
         DEF1 = parseInt(DEF1);
     } catch {
     }
+
     try {
+        N2 = document.getElementById('pet2_name').innerHTML;
+        C2 = document.getElementById('pet2_color').innerHTML;
+        L2 = document.getElementById('pet2_level').innerHTML;
+        S2 = document.getElementById('pet2_species').innerHTML;
+        STR2 = document.getElementById('pet2_str').innerHTML;
+        STR2 = parseInt(STR2);
         DEF2 = document.getElementById('pet2_def').innerHTML;
         DEF2 = parseInt(DEF2);
     } catch {
