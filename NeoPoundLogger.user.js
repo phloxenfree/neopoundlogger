@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name      Neopets Pound Logger
-// @version    1.01
+// @version    1.011
 // @author phloxenfree
 // @homepage https://github.com/phloxenfree
 // @description  Never lose a pet's info to a trigger-happy refresh again! Logs any desirable pet's info.
@@ -74,7 +74,7 @@
         DEF0 = parseInt(DEF0);
     } catch {
     }
-    
+
     try {
         N1 = document.getElementById('pet1_name').innerHTML;
         C1 = document.getElementById('pet1_color').innerHTML;
